@@ -1,0 +1,117 @@
+*, *::before, *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: rgb(172, 215, 230);
+   font-family: sans-serif;
+   text-align: center;
+}
+
+header {
+   display: flex;
+   justify-content: space-around;
+   box-shadow: 0 1px 10px;
+   background-color: white;
+   padding: 1.5em 0;
+   margin: 0 0 38vh 0;
+   min-width: 100vw;
+
+   #title {
+      color: aqua;
+      cursor: pointer;
+   }
+
+   ul {
+      display: flex;
+   }
+
+   li {
+      list-style: none;
+      margin-left: 3rem;
+   }
+
+   a {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: black;
+      opacity: .85;
+      text-decoration: none;
+      transition: opacity .2s ease;
+
+      &:hover {
+         opacity: .6;
+      }
+
+      &:active {
+         color: turquoise;
+         opacity: 1;
+      }
+
+   }
+}
+
+.color-container {
+   background-color: black;
+   padding: 1em .5em;
+   width: 90%;
+   max-width: 600px;
+   border-radius: 5px;
+   margin: 0 auto 3rem auto;
+
+   #background-color-text {
+      color: white;
+      font-size: clamp(1rem, 1.8rem, 2.5rem);
+      font-weight: bold;
+   }
+
+   #color-code {
+      color: aqua;
+      font-size: 1.9rem;
+      display: inline-block;
+      margin-left: 1rem;
+      font-weight: bold;
+   }
+}
+
+#color-flipper-btn {
+   background-color: transparent;
+   border: 2px solid;
+   border-radius: 5px;
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: .9rem;
+   word-spacing: 3px;
+   letter-spacing: 1px;
+   padding: .8em 2.2rem;
+   cursor: pointer;
+
+   &:active {
+      transform: scale(.98);
+      opacity: .8;
+   }
+}
+
+@media (max-width:600px) {
+   #background-color-text {
+      display: block;
+   }
+
+   header {
+      flex-direction: column;
+
+      #title {
+         margin-bottom: 1rem;
+      }
+
+      ul {
+         justify-content: center;
+
+         li {
+            margin: 0 1em;
+         }
+      }
+   }
+}
